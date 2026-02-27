@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  authapi:
+    image: mcr.microsoft.com/dotnet/sdk:9.0
+    container_name: authapi_container
+    volumes:
+      - ./AuthApi:/src           # Mount your source code
+    working_dir: /src
+    command: dotnet watch run --urls http://0.0.0.0:8080
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=authdb;Username=postgres;Password=P@ssw0rd"
+      JwtSettings__SecretKey: "v3ryL0ngSuperS3cretKeyThatIs32Chars!"
+      JwtSettings__Issuer: "AuthApi"
+      JwtSettings__Audience: "AuthApiUsers"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: authapi_db
+    restart: always
+    environment:
+      POSTGRES_DB: authdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: P@ssw0rd
+    ports:
+      - "5432:5432"
