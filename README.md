@@ -68,13 +68,13 @@ This project is licensed under the MIT License.
 ## Screenshots
 
 ### Docker Environment
-![Docker Containers Running](Screenshots/DockerContainerRunning.png)
-![Docker Images](Screenshots/DockerImages.png)
+![Docker Containers Running](AuthApi/Screenshots/DockerContainerRunning.png)
+![Docker Images](AuthApi/Screenshots/DockerImages.png)
 
 ### Swagger API
-![Swagger Endpoints](Screenshots/SwaggerEndpoints.png)
-![Swagger Login](Screenshots/SwaggerLogin.png)
-![JWT Token Example](Screenshots/SwaggerJWTToken.png)
-![Authorize with Token](Screenshots/SwaggerTokenAuthorize.png)
-![Authorized Access](Screenshots/SwaggerTokenAuthorized.png)
-![User Details](Screenshots/SwaggerUserDetails.png)
+![Swagger Endpoints](AuthApi/Screenshots/SwaggerEndpoints.png)
+![Swagger Login](AuthApi/Screenshots/SwaggerLogin.png)
+![JWT Token Example](AuthApi/Screenshots/SwaggerJWTToken.png)
+![Authorize with Token](AuthApi/Screenshots/SwaggerTokenAuthorize.png)
+![Authorized Access](AuthApi/Screenshots/SwaggerTokenAuthorized.png)
+![User Details](AuthApi/Screenshots/SwaggerUserDetails.png)
