@@ -196,6 +196,17 @@ if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Docker"))
         // Pre-authorize with a hardcoded token (for dev/testing only)
         c.ConfigObject.AdditionalItems["persistAuthorization"] = true;
     });
+
+    // Redirect root to Swagger
+    app.Use(async (context, next) =>
+    {
+        if (context.Request.Path == "/" || context.Request.Path == "/index.html")
+        {
+            context.Response.Redirect("/swagger");
+            return;
+        }
+        await next();
+    });
 }
 
 if (!app.Environment.IsEnvironment("Docker"))
