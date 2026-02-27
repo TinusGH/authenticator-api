@@ -33,7 +33,7 @@ The API is secured using **JWT tokens**, and passwords are hashed using **BCrypt
 git clone https://github.com/YOUR_USERNAME/authenticator-api.git
 cd authenticator-api
 
-2.Start the API and PostgreSQL containers using Docker Compose:
+2. Start the API and PostgreSQL containers using Docker Compose:
 docker-compose up -d --build
 
 3. Verify the containers are running:
