@@ -64,3 +64,17 @@ dotnet test AuthApi.Tests/AuthApi.Tests.csproj --settings tests.runsettings
 License
 
 This project is licensed under the MIT License.
+
+## Screenshots
+
+### Docker Environment
+![Docker Containers Running](Screenshots/DockerContainerRunning.png)
+![Docker Images](Screenshots/DockerImages.png)
+
+### Swagger API
+![Swagger Endpoints](Screenshots/SwaggerEndpoints.png)
+![Swagger Login](Screenshots/SwaggerLogin.png)
+![JWT Token Example](Screenshots/SwaggerJWTToken.png)
+![Authorize with Token](Screenshots/SwaggerTokenAuthorize.png)
+![Authorized Access](Screenshots/SwaggerTokenAuthorized.png)
+![User Details](Screenshots/SwaggerUserDetails.png)
